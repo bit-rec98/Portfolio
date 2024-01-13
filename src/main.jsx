@@ -1,10 +1,28 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
+import './css/styles.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Index from './pages/Index'
+import Home from './pages/Home'
+import About from './pages/About'
+import Projects from './pages/Projects'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+      <BrowserRouter>
+      <Navbar/>
+      <main id='main-container'>
+        <Routes>
+          <Route path='/' element={<Index/>}></Route>
+          <Route path='/home' element={<Home/>}></Route>
+          <Route path='/about' element={<About/>}></Route>
+          <Route path='/projects' element={<Projects/>}></Route>
+        </Routes>
+      </main>
+      <Footer/>
+      </BrowserRouter>
   </React.StrictMode>,
 )
