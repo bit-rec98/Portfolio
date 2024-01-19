@@ -3,14 +3,14 @@ const Footer = () => {
   return (
     <footer id="footer">
         <p>Pine.web</p>
-        <ul>
-            <li>
+        <ul id="footer-items">
+            <li className="footer-item">
                 <a href="#" target="_blank">Social Media</a>
             </li>
-            <li>
+            <li className="footer-item">
                 <a href="#" target="_blank">Social Media</a>
             </li>
-            <li>
+            <li className="footer-item">
                 <a href="#" target="_blank">Social Media</a>
             </li>
         </ul>

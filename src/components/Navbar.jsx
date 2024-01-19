@@ -1,29 +1,23 @@
-import { NavLink } from "react-router-dom"
+import { useState } from "react"
+import NavItemIndex from "./navbar/NavItemIndex"
+import NavItems from "./navbar/NavItems"
+
+const urlAddress = location.href
 
 const Navbar = () => {
-  return (
-    <header>
-        <nav id="navbar">
-            <ul id="navbar-items">
-                <li className="navbar-item">
-                    <NavLink to="/">Start</NavLink>
-                </li>
-                <li className="navbar-item">
-                    <NavLink to="/home">Home</NavLink>
-                </li>
-                <li className="navbar-item">
-                    <NavLink to="/about">About</NavLink>
-                </li>
-                <li className="navbar-item">
-                    <NavLink to="/projects">Projects</NavLink>
-                </li>
-            </ul>
-            <button id="theme-btn">
-                Theme
-            </button>
-        </nav>
-    </header>
-  )
+
+    const [address, setAddress] = useState(urlAddress)
+
+    return (
+        <header>
+            <nav id="navbar">
+                {address.includes('/home') || address.includes('/about') || address.includes('/projects') || address.includes('/github') ? <NavItems/> : <NavItemIndex/>}
+            </nav>
+        </header>
+    )
 }
 
 export default Navbar
+
+
+//! Solve dynamic rendering for navbars with/without links

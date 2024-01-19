@@ -1,3 +1,4 @@
+/* Header/navbar */
 #navbar{
     display: flex;
     flex-wrap: wrap;
@@ -12,13 +13,21 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    margin-right: auto;
 }
+
+.navbar-list-item{
+    margin: 1rem;
+    padding: 1rem;
+}
+
 .navbar-item{
     border: 1px solid #444;
     margin: 1rem;
     padding: 1rem;
 }
 
+/* Main */
 #main-container{
     display: flex;
     flex-direction: column;
@@ -26,10 +35,38 @@
     background-color: #777;
 }
 
+#home-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.home-item{
+    margin: 1rem;
+    padding: 6rem;
+    border: 1px solid #222;
+}
+
+/* Footer */
 #footer{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+}
+
+#footer-items{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-item{
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #222;
 }
