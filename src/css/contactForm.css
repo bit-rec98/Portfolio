@@ -1,0 +1,42 @@
+#contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#inputs{ 
+    /* Wrap this element with media queries */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-field{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.input-field label, .input-field input{
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.input-field textarea{
+    resize: vertical;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+#send-button{
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}

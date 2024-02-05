@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import '/src/css/navbar.css'
 
 const NavItems = () => {
     return (
@@ -17,7 +18,7 @@ const NavItems = () => {
                 <NavLink className="navbar-item" to="/projects">Projects</NavLink>
                 </li>
             </ul>
-            <button id="theme-btn">Theme</button>
+            <button id="theme-btn"></button>
         </>
     );
 };

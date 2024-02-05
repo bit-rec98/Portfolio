@@ -1,17 +1,13 @@
-import { useState } from "react"
-import NavItemIndex from "./navbar/NavItemIndex"
+// import NavItemIndex from "./navbar/NavItemIndex" ----> Solve dynamic rendering
 import NavItems from "./navbar/NavItems"
 
-const urlAddress = location.href
-
 const Navbar = () => {
-
-    const [address, setAddress] = useState(urlAddress)
 
     return (
         <header>
             <nav id="navbar">
-                {address.includes('/home') || address.includes('/about') || address.includes('/projects') || address.includes('/github') ? <NavItems/> : <NavItemIndex/>}
+                {/* {address.includes('/home') || address.includes('/about') || address.includes('/projects') || address.includes('/github') ? <NavItems/> : <NavItemIndex/>} */}
+                <NavItems></NavItems>
             </nav>
         </header>
     )

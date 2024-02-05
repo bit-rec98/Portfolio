@@ -1,37 +1,55 @@
+import Technology from "../components/about/Technology"
+import Contact from "./Contact"
+import '../css/about.css'
+import '../css/technology.css'
 
 const About = () => {
   return (
-    <section>
+    <section id="about-section">
+        <h1 id="about-title">About me</h1>
         <article>
-          <h1>About me</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam consequatur earum ex est nesciunt. Neque quo sit quas quibusdam soluta. A facilis accusantium unde ab nam ullam voluptatem laborum? Temporibus nihil sequi voluptas deleniti voluptate nisi optio dicta libero nobis, impedit atque sapiente quos voluptatibus inventore commodi! Error, similique animi.</p>
+          <p>I am Fullstack web(3) student focused on learning MERN/MEAN stack as well as Solidity for smart contracts development both by attending courses, reading documentation and self-teaching on the long term. Also, I am self-taught learner on UX/UI design and I am participating in building <a href="#" target="_blank">QuantumScript Services</a>, which is a website development agency for businesses which require an innovative design, efficient and optimized architecture.</p>
         </article>
+        <hr />
         <article>
-          <h2>Tech stack</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, molestiae.</p>
-          <div>
-            <div>
-              <h3>Tech type</h3>
-              <div>Tech</div>
-              <div>Tech</div>
-              <div>Tech</div>
-              <div>Tech</div>
+          <h2 className="about-subtitle">Tech stack</h2>
+          <p>Here below you will see my current tech stack sorted by environment type</p>
+
+          <div id="tech-stack-container">
+            <h3>Frontend Development</h3>
+            <div className="technology-container">
+                <Technology imgSource={`/public/img/react-logo.png`}/>
+                <Technology imgSource={`/public/img/react-logo.png`}/>
+                <Technology imgSource={`/public/img/react-logo.png`}/>
             </div>
-            <div>
-              <h3>Tech type</h3>
-              <div>Tech</div>
-              <div>Tech</div>
-              <div>Tech</div>
-              <div>Tech</div>
+            
+            <h3>Backend Development</h3>
+            <div className="technology-container">
+                <Technology imgSource={`/public/img/react-logo.png`}/>
+                <Technology imgSource={`/public/img/react-logo.png`}/>
+                <Technology imgSource={`/public/img/react-logo.png`}/>
             </div>
-            <div>
-              <h3>Tech type</h3>
-              <div>Tech</div>
-              <div>Tech</div>
-              <div>Tech</div>
-              <div>Tech</div>
+            
+            <h3>Operating Systems</h3>
+            <div className="technology-container">
+                <Technology imgSource={`/public/img/react-logo.png`}/>
+                <Technology imgSource={`/public/img/react-logo.png`}/>
+                <Technology imgSource={`/public/img/react-logo.png`}/>
+            </div>
+
+            <h3>Database Management Systems</h3>
+            <div className="technology-container">
+                <Technology imgSource={`/public/img/react-logo.png`}/>
+                <Technology imgSource={`/public/img/react-logo.png`}/>
+                <Technology imgSource={`/public/img/react-logo.png`}/>
             </div>
           </div>
+
+        </article>
+        <hr />
+        <article>
+          <h2 className="about-subtitle">Leave me a message so I can contact you!</h2>
+          <Contact/>
         </article>
     </section>
   )

@@ -1,31 +1,17 @@
+import Project from "../components/projects/Project"
 
 const Projects = () => {
   return (
-    <section>
+    <section id="projects-section">
+        <h1>Explore my projects here below!</h1>
         <article>
-          <div>
-            <figure>
-              <img src="#" alt="project-img"/>
-              <figcaption>
-                Project description
-              </figcaption>
-            </figure>
-          </div>
-          <div>
-            <figure>
-              <img src="#" alt="project-img"/>
-              <figcaption>
-                Project description
-              </figcaption>
-            </figure>
-          </div>
-          <div>
-            <figure>
-              <img src="#" alt="project-img"/>
-              <figcaption>
-                Project description
-              </figcaption>
-            </figure>
+          <div id="projects-container">
+            <Project imgSource='/public/img/react-logo.png'/>
+            <Project imgSource='/public/img/react-logo.png'/>
+            <Project imgSource='/public/img/react-logo.png'/>
+            <Project imgSource='/public/img/react-logo.png'/>
+            <Project imgSource='/public/img/react-logo.png'/>
+            <Project imgSource='/public/img/react-logo.png'/>
           </div>
         </article>
     </section>

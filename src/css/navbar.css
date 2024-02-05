@@ -1,0 +1,8 @@
+#theme-btn{
+    padding: 1rem;
+    margin: 0 1rem;
+    border: 1px solid transparent;
+    border-radius: 4rem;
+    background-color: #222;
+    cursor: pointer;
+}
