@@ -1,14 +1,4 @@
-/* About page */
-
-#tech-stack-container{
-    margin: 1.5rem 0;
-}
-
-#tech-stack-container h3{
-    font-size: 1.5rem;
-    margin-top: 2rem;
-}
-
+/* Project.jsx components */
 .technology-container{
     padding: 0 4rem;
     display: flex;
@@ -19,15 +9,42 @@
     gap: 1rem;
 }
 
-.technology-item{
-    margin: 1rem;
-    padding: 4rem;
-    border: 1px solid #222;
+#technology__{
+    text-decoration: none;
 }
 
-.technology-item img{
+.technology__item{
+    margin: .5rem;
+    padding: 2rem;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    background-color: #CCCCCC40;
+    box-shadow: 0 0 1px 1px #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.technology__item .technology__logo{
     width: 8rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: .5rem;
 }
-.technology-item h2, .technology-item figcaption{
-    font-size: 1rem;
+
+#technology__ .technology__item .technology__text{
+    
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #222;
+    margin: .5rem 0;
+    padding: .5rem;
 }
+
+/* .technology__item:hover{
+    box-shadow: 0 0 .5rem .2rem #222;
+    transition: all .5s;
+    cursor: pointer;
+} */

@@ -1,13 +1,17 @@
-// import NavItemIndex from "./navbar/NavItemIndex" ----> Solve dynamic rendering
 import NavItems from "./navbar/NavItems"
+// import NavItemIndex from "./navbar/NavItemIndex"
+// import { useContext } from "react"
+// import NavBarContext from "../contexts/NavBarContext"
+import '../css/navbar.css'
 
 const Navbar = () => {
+
+    // const {index} = useContext(NavBarContext)
 
     return (
         <header>
             <nav id="navbar">
-                {/* {address.includes('/home') || address.includes('/about') || address.includes('/projects') || address.includes('/github') ? <NavItems/> : <NavItemIndex/>} */}
-                <NavItems></NavItems>
+                <NavItems/>
             </nav>
         </header>
     )

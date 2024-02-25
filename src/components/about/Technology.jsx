@@ -1,12 +1,26 @@
-import '../../css/technology.css'
+import "../../css/technology.css";
 
-const Technology = ({imgSource, technologyName = 'React'}) => {
+const Technology = ({ technologyData }) => {
     return (
-        <figure className="technology-item">
-            <img src={`${imgSource}`} alt={`${technologyName}`} />
-            <h2>{`${technologyName}`}</h2>
-            <figcaption>Description</figcaption>
-        </figure>
+        <a
+        href={technologyData.link}
+        target="_blank"
+        rel="noreferrer"
+        id="technology__"
+        >
+            <figure className="technology__item">
+                <img
+                src={`/src/assets/stack-logos/${technologyData.logo}`}
+                alt={`${technologyData.name}`}
+                className="technology__logo"
+                />
+                <p
+                className="technology__text"
+                >
+                    {`${technologyData.name}`}
+                </p>
+            </figure>
+        </a>
     );
 };
 

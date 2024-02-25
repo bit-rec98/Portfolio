@@ -1,17 +1,19 @@
 import Project from "../components/projects/Project"
+import '../css/projects.css'
+import {projects} from '../data/projects.json'
+
 
 const Projects = () => {
+
+
   return (
     <section id="projects-section">
         <h1>Explore my projects here below!</h1>
         <article>
           <div id="projects-container">
-            <Project imgSource='/public/img/react-logo.png'/>
-            <Project imgSource='/public/img/react-logo.png'/>
-            <Project imgSource='/public/img/react-logo.png'/>
-            <Project imgSource='/public/img/react-logo.png'/>
-            <Project imgSource='/public/img/react-logo.png'/>
-            <Project imgSource='/public/img/react-logo.png'/>
+            {projects.map((project) => (
+            <Project key={project.id} projectData={project}/>
+            ))}
           </div>
         </article>
     </section>

@@ -1,8 +1,51 @@
-#theme-btn{
+/* Header/navbar */
+#navbar{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #222;
+}
+#navbar-items{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: auto;
+}
+
+.navbar-list-item{
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.navbar-item{
+    color: #F5F5F5;
+    text-decoration: none;
+    margin: 1rem;
+    padding: .5rem 1rem;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom .5s;
+}
+.navbar-item:hover{
+    border-bottom: 1px solid #F5F5F5;
+}
+
+
+#theme-btn {
     padding: 1rem;
     margin: 0 1rem;
-    border: 1px solid transparent;
+    border: 1px solid #F5F5F5;
     border-radius: 4rem;
     background-color: #222;
     cursor: pointer;
+    box-shadow: 0 0 .5rem #F5F5F5; /* Initial box-shadow with .5rem spread */
+    transition: box-shadow 0.5s; /* Transition for box-shadow property */
+}
+
+#theme-btn:hover {
+    box-shadow: 0 0 1.5rem #F5F5F5; /* Override box-shadow for spreading 1.5rem on hover */
 }

@@ -1,12 +1,19 @@
-import '../../css/projects.css'
+import "../../css/projects.css";
 
-const Project = ({imgSource, projectName = "title", projectDescription = "Project description"}) => {
+const Project = ({ projectData }) => {
+    // console.log(projectData.image);
+
     return (
-        <figure className="project-item">
-            <img src={`${imgSource}`} alt={`${projectName}`} />
-            <h2>{projectName}</h2>
-            <figcaption>{`${projectDescription}`}</figcaption>
-        </figure>
+        <a href={projectData.link}>
+            <figure className="project-item">
+                <img
+                src={`../../assets/img/projects/lth-store.png`}
+                alt={`${projectData.title}`}
+                />
+                <h2>{projectData.title}</h2>
+                <figcaption>{`${projectData.description}`}</figcaption>
+            </figure>
+        </a>
     );
 };
 

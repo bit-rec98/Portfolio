@@ -1,0 +1,18 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "LTH Store",
+            "description": "LTH store is an ecommerce focused on the business of cryptocurrency mining sells for crypto enthusiasts and companies who want to explore the crypto environment from the miners perspective.",
+            "image": "lth-store.png",
+            "link": "https://lthstore-v3.netlify.app/"
+        },
+        {
+            "id": 2,
+            "title": "Solid/Gradient palette generator app",
+            "description": "This app allows to generate and copy different solid and gradient color hex codes to use them in any project. Either the users are designers or web developers, this app will help them to get interesting colors and gradient combinations",
+            "image": "palette-generator-app.png",
+            "link": "https://palettesgenerator.netlify.app/"
+        }
+    ]
+}

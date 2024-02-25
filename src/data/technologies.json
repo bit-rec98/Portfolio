@@ -1,0 +1,89 @@
+{
+    "technologies": [
+        {
+            "id": 1,
+            "name": "HTML5",
+            "logo": "html5-original.svg",
+            "link": "https://developer.mozilla.org/en/docs/Web/HTML",
+            "type": "frontend"
+
+        },
+        {
+            "id": 2,
+            "name": "CSS3",
+            "logo": "css3-original.svg",
+            "link": "https://developer.mozilla.org/en/docs/Web/CSS",
+            "type": "frontend"
+        },
+        {
+            "id": 3,
+            "name": "JavaScript",
+            "logo": "javascript-original.svg",
+            "link": "https://developer.mozilla.org/en/docs/Web/JavaScript",
+            "type": "frontend"
+        },
+        {
+            "id": 4,
+            "name": "Bootstrap",
+            "logo": "bootstrap-original.svg",
+            "link": "https://getbootstrap.com/",
+            "type": "frontend"
+        },
+        {
+            "id": 5,
+            "name": "Sass",
+            "logo": "sass-original.svg",
+            "link": "https://sass-lang.com/",
+            "type": "frontend"
+        },
+        {
+            "id": 6,
+            "name": "Figma",
+            "logo": "figma-original.svg",
+            "link": "https://www.figma.com/",
+            "type": "frontend"
+        },
+        {
+            "id": 7,
+            "name": "Git",
+            "logo": "git-original.svg",
+            "link": "https://git-scm.com/",
+            "type": "frontend"
+        },
+        {
+            "id": 8,
+            "name": "GitHub",
+            "logo": "github-original.svg",
+            "link": "https://github.com/",
+            "type": "frontend"
+        },
+        {
+            "id": 9,
+            "name": "Node.js",
+            "logo": "nodejs-original.svg",
+            "link": "https://nodejs.org/en",
+            "type": "backend"
+        },
+        {
+            "id": 10,
+            "name": "Express.js",
+            "logo": "express-original-wordmark.svg",
+            "link": "https://expressjs.com/",
+            "type": "backend"
+        },
+        {
+            "id": 11,
+            "name": "MongoDB",
+            "logo": "mongodb-original.svg",
+            "link": "https://www.mongodb.com/",
+            "type": "dbms"
+        },
+        {
+            "id": 12,
+            "name": "MySQL",
+            "logo": "mysql-original.svg",
+            "link": "https://dev.mysql.com/",
+            "type": "dbms"
+        }
+    ]
+}
