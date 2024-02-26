@@ -1,0 +1,36 @@
+h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#form-field{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+#form-fields .form-input{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-evenly;
+    padding: .5rem 4rem;
+    margin: 0 .5rem;
+    border-left: 1px solid #222;
+}
+
+hr{
+    margin: 1rem 0;
+}
+
+.form-input label, .form-input input {
+    padding: 1rem;
+    margin: 0;
+}
+
+#form-send-button{
+    padding: 1rem;
+    margin: .5rem auto;
+    width: 60%;
+}

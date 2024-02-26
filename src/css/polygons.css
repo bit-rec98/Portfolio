@@ -1,5 +1,13 @@
-
 /* Index */
+.polygon-a{
+    border: 1px solid red;
+}
+
+.polygon-b{
+    border: 1px solid cyan;
+}
+
+
 .polygon-a{
     position: absolute;
     top: 20%;
@@ -7,7 +15,7 @@
     z-index: 0;
     margin: 2rem;
     padding: 4rem;
-    border: 1px solid #222;
+    border: 1px solid red;
     border-radius: 6rem;
 }
 .polygon-b{
@@ -17,7 +25,7 @@
     z-index: 0;
     margin: 2rem;
     padding: 2rem;
-    border: 1px solid #222;
+    border: 1px solid cyan;
     border-radius: 4rem;
 }
 .polygon-c{
@@ -30,9 +38,3 @@
     border: 1px solid #222;
     border-radius: 8rem;
 }
-
-/* #start-navigation:hover{
-    background-color: crimson;
-    color: #222;
-    transition: all .5s;
-} */

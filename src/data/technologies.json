@@ -73,6 +73,13 @@
         },
         {
             "id": 11,
+            "name": "Solidity",
+            "logo": "solidity-original.svg",
+            "link": "https://soliditylang.org/",
+            "type": "backend"
+        },
+        {
+            "id": 11,
             "name": "MongoDB",
             "logo": "mongodb-original.svg",
             "link": "https://www.mongodb.com/",

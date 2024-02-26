@@ -1,10 +1,8 @@
-import Project from "../components/projects/Project"
 import '../css/projects.css'
+import Project from "../components/projects/Project"
 import {projects} from '../data/projects.json'
 
-
 const Projects = () => {
-
 
   return (
     <section id="projects-section">
@@ -12,8 +10,8 @@ const Projects = () => {
         <article>
           <div id="projects-container">
             {projects.map((project) => (
-            <Project key={project.id} projectData={project}/>
-            ))}
+              <Project key={project.id} projectData={project}/>
+          ))}
           </div>
         </article>
     </section>

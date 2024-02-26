@@ -1,8 +1,9 @@
 import "../css/about.css";
 import "../css/technology.css";
+import '../css/contactForm.css'
 import Technology from "../components/about/Technology";
 import { technologies } from "../data/technologies.json";
-import Contact from "./Contact";
+import ContactForm from "../components/about/ContactForm";
 
 const About = () => {
   return (
@@ -31,7 +32,7 @@ const About = () => {
         </p>
 
         <div id="tech-stack-container">
-          <h3>Frontend Development</h3>
+          <h3>Frontend Development and Design</h3>
           <div className="technology-container">
             {technologies &&
               technologies.map((technology) => {
@@ -61,22 +62,7 @@ const About = () => {
               })}
           </div>
           <hr />
-          {/* <h3>Operating Systems</h3>
-          <div className="technology-container">
-            {technologies &&
-              technologies.map((technology) => {
-                if (technology.type === "oses") {
-                  return (
-                    <Technology
-                      key={technology.id}
-                      technologyData={technology}
-                    />
-                  );
-                }
-              })}
-          </div>
-          <hr /> */}
-          <h3>Database Management Systems</h3>
+          <h3>Database Management Systems and ORMs</h3>
           <div className="technology-container">
             {technologies &&
               technologies.map((technology) => {
@@ -97,7 +83,7 @@ const About = () => {
         <h2 className="about-subtitle">
           Leave me a message so I can contact you!
         </h2>
-        <Contact />
+        <ContactForm />
       </article>
     </section>
   );
