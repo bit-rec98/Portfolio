@@ -1,3 +1,4 @@
+// import './css/darkMode.css'
 import './App.css'
 import '../src/css/polygons.css'
 
@@ -23,8 +24,8 @@ const App = () => {
     <>
       <BrowserRouter>
         <NavBarProvider>
-          <Navbar />
           <main id="main-container">
+          <Navbar />
             <Routes>
               <Route path="/" element={<Index />}></Route>
               <Route path="/home" element={<Home />}></Route>
@@ -34,12 +35,12 @@ const App = () => {
               <Route path="/terms" element={<UsageTerms></UsageTerms>}></Route>
               <Route path="/*" element={<NotFound/>}></Route>
             </Routes>
-          </main>
           <PolygonA/>
           <PolygonA/>
           <PolygonB/>
           <PolygonC/>
           <Footer />
+          </main>
         </NavBarProvider>
       </BrowserRouter>
     </>

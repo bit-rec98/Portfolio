@@ -14,8 +14,8 @@
     font-size: 1.5rem;
     margin: 2rem;
     padding: 4rem;
-    border: 1px solid #222;
-    border-radius: 6rem;
+    border: 1px solid transparent;
+    border-radius: 1rem;
     color: #222;
     text-decoration: none;
     text-align: center;
@@ -24,10 +24,10 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    box-shadow: 0 0 0 #222;
+    box-shadow: 0 0 0 #00ffff;
     transition: box-shadow .5s;
 }
 
 #start-navigation:hover{
-    box-shadow: 0 0 .5rem #222;
+    box-shadow: 0 0 .5rem #00ffff;
 }

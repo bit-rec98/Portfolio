@@ -12,7 +12,7 @@ const ContactForm = () => {
             placeholder="Your name goes here..."
           />
           <label htmlFor="form-input-email">Email:</label>
-          <input type="text" id="form-input-email" placeholder="Name..." />
+          <input type="text" id="form-input-email" placeholder="example@email.com" />
         </div>
         <div className="input-field">
           <label htmlFor="form-input-message">Send me a message!</label>
@@ -20,6 +20,7 @@ const ContactForm = () => {
             name="subject-message"
             id="form-input-message"
             rows="10"
+            placeholder="Feel free to leave me a message..."
           ></textarea>
         </div>
       </div>

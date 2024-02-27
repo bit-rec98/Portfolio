@@ -5,7 +5,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #222;
+    background-color: #F5F5F5;
 }
 #navbar-items{
     list-style-type: none;
@@ -23,7 +23,7 @@
 }
 
 .navbar-item{
-    color: #F5F5F5;
+    color: #222222;
     text-decoration: none;
     margin: 1rem;
     padding: .5rem 1rem;
@@ -31,21 +31,21 @@
     transition: border-bottom .5s;
 }
 .navbar-item:hover{
-    border-bottom: 1px solid #F5F5F5;
+    border-bottom: 1px solid #222222;
 }
 
 
 #theme-btn {
     padding: 1rem;
     margin: 0 1rem;
-    border: 1px solid #F5F5F5;
+    border: 1px solid #222222;
     border-radius: 4rem;
     background-color: #222;
     cursor: pointer;
-    box-shadow: 0 0 .5rem #F5F5F5; /* Initial box-shadow with .5rem spread */
+    box-shadow: 0 0 .5rem #222222; /* Initial box-shadow with .5rem spread */
     transition: box-shadow 0.5s; /* Transition for box-shadow property */
 }
 
 #theme-btn:hover {
-    box-shadow: 0 0 1.5rem #F5F5F5; /* Override box-shadow for spreading 1.5rem on hover */
+    box-shadow: 0 0 1.5rem #222222; /* Override box-shadow for spreading 1.5rem on hover */
 }

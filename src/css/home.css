@@ -26,15 +26,15 @@
 .home-item{
     margin: 1rem;
     padding: 6rem;
-    border: 1px solid #222;
+    border: 1px solid transparent;
     color: #222;
     border-radius: .5rem;
     font-size: 1.5rem;
     text-decoration: none;
-    box-shadow: 0 0 0 #222;
+    box-shadow: 0 0 0 transparent;
     transition: box-shadow .5s;
 }
 
 .home-item:hover{
-    box-shadow: 0 0 .5rem #222;
+    box-shadow: 0 0 .5rem #00ffff;
 }

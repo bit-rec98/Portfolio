@@ -27,16 +27,31 @@
 .input-field label, .input-field input{
     padding: 1rem;
     font-size: 1rem;
+    border-radius: .5rem;
+}
+
+.input-field input{
+    border: 1px solid #222;
 }
 
 .input-field textarea{
     resize: vertical;
     padding: 1rem;
     font-size: 1rem;
+    border-radius: .5rem;
 }
 
 #send-button{
     padding: 1rem;
     font-size: 1rem;
     cursor: pointer;
+    border-radius: .5rem;
+    border: 1px solid #222;
+    background-color: #555;
+    transition: background-color .5s;
 }
+
+#send-button:hover{
+    background-color: rgb(75, 224, 224);
+}
+
