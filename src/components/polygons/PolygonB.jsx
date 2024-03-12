@@ -1,6 +1,6 @@
 const PolygonB = () => {
   return (
-    <div className="polygon polygon-b"></div>
+    <img src="/img/shapes/triangle-cyan.svg" loading="lazy" className="polygon polygon-b"/> 
   )
 }
 

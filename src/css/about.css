@@ -1,11 +1,15 @@
 
 /* About page */
+
+#about-section{
+    padding: 1rem 8rem;
+}
+
 #tech-stack-container{
     margin: 1.5rem 0;
-    background-color: rgba(98, 98, 98, 0.55);
+    background-color: #AAAAAA11;
     padding: .5rem 1.5rem;
     border-radius: 1rem;
-
 }
 
 #tech-stack-container h3{
@@ -26,8 +30,62 @@ p{
     font-weight: 500;
 }
 
+#qss-link{
+    text-decoration: none;
+    color: #222;
+    margin: 0 .5rem;
+    transition: .5s;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #222;
+}
+#qss-link:hover{
+    border-bottom: 1px solid #00ffff;
+}
+
 .about-subtitle{
     font-size: 2rem;
     margin-top: 1rem;
 }
 
+#about-section.darkMode #about-title, #about-section.darkMode #about-subtitle, #about-section.darkMode p, #about-section.darkMode #qss-link, #about-section.darkMode hr, #about-section.darkMode h2, #about-section.darkMode h3{
+    color: #f5f5f5;
+}
+#about-section.darkMode #qss-link{
+    border-bottom: 1px solid #f5f5f555;
+}
+
+#about-section.darkMode #qss-link:hover{
+    border-bottom: 1px solid #00ffff;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 1024){
+    #about-section{
+        padding: .5rem 2rem;
+    }
+    #about-title{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #about-section{
+        padding: .5rem 1.5rem;
+    }
+}
+
+@media screen and (max-width: 576px){
+    #about-section{
+        padding: 0 1.5rem;
+    }
+    #about-title{
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 480px){
+    #about-section{
+        padding: 0 1rem;
+    }
+}

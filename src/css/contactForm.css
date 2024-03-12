@@ -35,7 +35,7 @@
 }
 
 .input-field textarea{
-    resize: vertical;
+    resize: none;
     padding: 1rem;
     font-size: 1rem;
     border-radius: .5rem;
@@ -48,10 +48,21 @@
     border-radius: .5rem;
     border: 1px solid #222;
     background-color: #555;
-    transition: background-color .5s;
+    color: #f5f5f5;
+    transition: .5s;
 }
 
 #send-button:hover{
-    background-color: rgb(75, 224, 224);
+    background-color: #4be0e0;
+    color: #222222;
 }
 
+.input-field .darkMode{
+    color: #f5f5f5;
+}
+
+@media screen and (max-width: 576px) {
+    #inputs{
+        flex-wrap: wrap;
+    }
+}

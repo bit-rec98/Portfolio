@@ -28,6 +28,15 @@
   font-style: normal;
 } */
 
+:root{
+  /* General rules */
+  --lightModeColor: "#F5F5F5";
+  --darkModeColor: "#121212";
+  --backgroundColorLightMode: "#F5F5F5";
+  --backgroundColorDarkMode: "#121212";
+
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -41,39 +50,41 @@
 
 /* Main */
 #main-container {
-  min-height: 100vh;
-  min-width: 90vw;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
   gap: 4rem;
-  /* padding: 1rem 6rem; */
   padding: 0;
-  /* background-color: #f5f5f5; */
-  background: linear-gradient(to left, #26E089, #376650);
-  /* background-image: url('./assets/img/background.jpg'); */
+  margin: 0;
+  background-color: #f5f5f5;
   background-repeat: no-repeat;
   background-size: cover;
 
-  
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 10; /*! Solve z-index */
+  z-index: 10;
+  transition: .5s;
+}
+
+#main-container.darkMode{
+  background-color: #121212;
 }
 
 /* For Webkit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
-    width: 3px; /* Set the width of the scrollbar */
+    width: 4px; /* Set the width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #22222250; /* Set the color of the track (the area behind the scrollbar) */
+    background-color: #12121250; 
+    /* Set the color of the track (the area behind the scrollbar) */
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #222; /* Set the color of the scrollbar thumb (the draggable part) */
+    background-color: #121212; /* Set the color of the scrollbar thumb (the draggable part) */
     border-radius: 6px; /* Set the border radius for a rounded appearance */
 }
 
@@ -81,7 +92,7 @@
 /* Note: Firefox has its own pseudo-elements for styling */
 /* These styles are just examples, and you may need to adjust them based on your design */
 * {
-    scrollbar-color: #222; /* Set the color of the thumb and track in Firefox */
+    scrollbar-color: #121212; /* Set the color of the thumb and track in Firefox */
 }
 
 /* For IE 11 */
@@ -96,3 +107,8 @@ html {
     scrollbar-darkshadow-color: transparent; /* Set the color of the scrollbar bottom shadow */
 }
 
+@media screen and (max-width: 1600px){
+  #main-container{
+    max-width: 100%;
+  }
+}

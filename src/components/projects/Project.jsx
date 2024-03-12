@@ -2,16 +2,15 @@ import "../../css/projects.css";
 import { SlLink } from "react-icons/sl";
 import { VscGithubInverted } from "react-icons/vsc";
 
-const Project = ({ projectData }) => {
-    // console.log(projectData)
+const Project = ({ projectData, darkMode, spanishLanguage }) => {
 
     return (
         <>
             <figure className="project-item">
                 <a href={projectData.link} target="_blank" rel="noreferrer">
-                    <img src={`/src/assets/img/projects/${projectData.image}`} alt={projectData.name}/>
+                    <img src={`/src/assets/img/projects/${projectData.image}`} alt={projectData.name} loading="lazy"/>
                 </a>
-                <figcaption className="project-caption">
+                <figcaption className={darkMode ? "project-caption darkMode" : "project-caption"}>
                     <h2>{projectData.title}</h2>
                     <div className="project-data">
                         <p>{projectData.description}</p>

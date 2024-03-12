@@ -1,23 +1,37 @@
-import NavItems from "./navbar/NavItems"
-// import NavItemIndex from "./navbar/NavItemIndex"
-// import { useContext } from "react"
-// import NavBarContext from "../contexts/NavBarContext"
-import '../css/navbar.css'
+import NavItems from "./navbar/NavItems";
+import "../css/navbar.css";
+import { useLocation } from "react-router";
 
-const Navbar = () => {
+// {darkMode, handleDarkMode}
 
-    // const {index} = useContext(NavBarContext)
+const Navbar = ({handleDarkMode, darkMode}) => {
+    const location = useLocation();
+    const isIndex = location.pathname === "/";
 
     return (
         <header>
-            <nav id="navbar">
-                <NavItems/>
+            <nav className={darkMode ? "darkMode" : ""} id="navbar">
+                {isIndex ? (
+                    <button
+                        id="theme-btn"
+                        className={darkMode ? "darkMode" : ""}
+                        onClick={handleDarkMode}
+                    ></button>
+                ) : (
+                    <>
+                        <NavItems 
+                        darkMode={darkMode} 
+                        />
+                        <button
+                            id="theme-btn"
+                            className={darkMode ? "darkMode" : ""}
+                            onClick={handleDarkMode}
+                        ></button>
+                    </>
+                )}
             </nav>
         </header>
-    )
-}
+    );
+};
 
-export default Navbar
-
-
-//! Solve dynamic rendering for navbars with/without links
+export default Navbar;

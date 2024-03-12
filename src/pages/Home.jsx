@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom"
 import '../css/home.css'
 
-const Home = () => {
+const Home = ({darkMode, spanishLanguage}) => {
   return (
-    <section id="home-section">
+    <section id="home-section" className={darkMode ? "darkMode" : ""}>
       <h1>Welcome! I’m Cristian Recabarren, UX/UI designer & Full Stack Web(3) developer</h1>
       <div id="home-section-container">
         <NavLink className='home-item' to='/projects'>Projects</NavLink>

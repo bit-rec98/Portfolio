@@ -1,0 +1,20 @@
+article{
+    padding: 1rem 4rem;
+}
+p{
+    padding: .5rem;
+}
+
+ul{
+    list-style-type: none;
+}
+
+@media screen and (max-width: 576px) {
+    article{
+        padding: 1rem 2rem;
+    }
+}
+
+article.darkMode h1, article.darkMode h2, article.darkMode p{
+    color: #f5f5f5;
+}

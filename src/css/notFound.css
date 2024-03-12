@@ -1,0 +1,43 @@
+#notFound-page{
+    height: 70vh;
+}
+
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3rem;
+}
+#notFound-page, #notFound-page div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#back-btn{
+    text-decoration: none;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #121212;
+    color: #121212;
+    border-radius: .5rem;
+    box-shadow: 0 0 0 transparent;
+    transition: .5s;
+}
+
+#back-btn:hover{
+    box-shadow:  0 0 .5rem #121212;
+}
+
+/* DarkMode */
+#notFound-page.darkMode h1, #notFound-page.darkMode h2, #notFound-page.darkMode p, #notFound-page.darkMode #back-btn{
+    color: #f5f5f5;
+}
+
+#notFound-page.darkMode #back-btn{
+    border: 1px solid #f5f5f5;
+}
+#notFound-page.darkMode #back-btn:hover{
+    box-shadow: 0 0 .5rem #f5f5f5;
+}

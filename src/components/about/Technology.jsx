@@ -1,12 +1,12 @@
 import "../../css/technology.css";
 
-const Technology = ({ technologyData }) => {
+const Technology = ({ technologyData, darkMode }) => {
     return (
         <a
         href={technologyData.link}
         target="_blank"
         rel="noreferrer"
-        id="technology__"
+        className="technology__"
         >
             <figure className="technology__item">
                 <img
@@ -15,7 +15,7 @@ const Technology = ({ technologyData }) => {
                 className="technology__logo"
                 />
                 <p
-                className="technology__text"
+                className={darkMode ? "technology__text darkMode" : "technology__text"}
                 >
                     {`${technologyData.name}`}
                 </p>

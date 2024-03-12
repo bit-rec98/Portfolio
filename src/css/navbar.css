@@ -3,10 +3,13 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     align-items: center;
     background-color: #F5F5F5;
+    transition: .5s;
+    height: 5.5rem;
 }
+
 #navbar-items{
     list-style-type: none;
     display: flex;
@@ -23,7 +26,7 @@
 }
 
 .navbar-item{
-    color: #222222;
+    color: #121212;
     text-decoration: none;
     margin: 1rem;
     padding: .5rem 1rem;
@@ -31,21 +34,40 @@
     transition: border-bottom .5s;
 }
 .navbar-item:hover{
-    border-bottom: 1px solid #222222;
+    border-bottom: 1px solid #121212;
 }
-
 
 #theme-btn {
     padding: 1rem;
-    margin: 0 1rem;
-    border: 1px solid #222222;
+    margin: 1rem;
+    border: 1px solid #121212;
     border-radius: 4rem;
-    background-color: #222;
+    background-color: #121212;
     cursor: pointer;
-    box-shadow: 0 0 .5rem #222222; /* Initial box-shadow with .5rem spread */
-    transition: box-shadow 0.5s; /* Transition for box-shadow property */
+    box-shadow: 0 0 .5rem #121212; /* Initial box-shadow with .5rem spread */
+    transition: .5s; /* Transition for box-shadow property */
 }
 
+/* Dark mode */
 #theme-btn:hover {
-    box-shadow: 0 0 1.5rem #222222; /* Override box-shadow for spreading 1.5rem on hover */
+    box-shadow: 0 0 1.5rem #121212; /* Override box-shadow for spreading 1.5rem on hover */
+}
+#navbar.darkMode{
+    background-color: #121212;
+}
+#theme-btn.darkMode{
+    background-color: #F5F5F5;
+    border: 1px solid #F5F5F5;
+    box-shadow: 0 0 .5rem #F5F5F5;
+    transition: box-shadow 0.5s;
+}
+#theme-btn.darkMode:hover{
+    box-shadow: 0 0 1.5rem #F5F5F5;
+}
+
+.navbar-item.darkMode{
+    color: #F5F5F5
+}
+.navbar-item.darkMode:hover{
+    border-bottom: 1px solid #F5F5F5;
 }

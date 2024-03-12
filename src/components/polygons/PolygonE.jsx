@@ -1,7 +1,7 @@
 
 const PolygonE = () => {
   return (
-    <div className='polygon polygon-e'></div>
+    <img src="/img/shapes/square-red.svg" loading="lazy" className="polygon polygon-e"/>
   )
 }
 

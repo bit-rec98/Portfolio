@@ -1,27 +1,27 @@
 import "../../css/contactForm.css";
 
-const ContactForm = () => {
+const ContactForm = ({darkMode, spanishLanguage}) => {
   return (
-    <form id="contact-form" action="#" method="POST">
+    <form id="contact-form">
       <div id="inputs">
         <div className="input-field">
-          <label htmlFor="form-input-name">Name:</label>
+          <label htmlFor="form-input-name" className={darkMode ? "darkMode" : ""}>Name:</label>
           <input
             type="text"
             id="form-input-name"
             placeholder="Your name goes here..."
           />
-          <label htmlFor="form-input-email">Email:</label>
+          <label htmlFor="form-input-email" className={darkMode ? "darkMode" : ""}>Email:</label>
           <input type="text" id="form-input-email" placeholder="example@email.com" />
         </div>
         <div className="input-field">
-          <label htmlFor="form-input-message">Send me a message!</label>
+          <label htmlFor="form-input-message" className={darkMode ? "darkMode" : ""}>Send me a message!</label>
           <textarea
             name="subject-message"
             id="form-input-message"
             rows="10"
             placeholder="Feel free to leave me a message..."
-          ></textarea>
+          />
         </div>
       </div>
       <button id="send-button" type="submit">
