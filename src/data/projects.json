@@ -2,16 +2,28 @@
     "projects": [
         {
             "id": 1,
-            "title": "LTH Store",
-            "description": "LTH store is an ecommerce focused on the business of cryptocurrency mining sells for crypto enthusiasts and companies who want to explore the crypto environment from the miners perspective.",
+            "title": {
+                "english": "LTH Store",
+                "spanish": "LTH Store"
+            },
+            "description": {
+                "english": "LTH store is an ecommerce focused on the business of cryptocurrency mining sells for crypto enthusiasts and companies who want to explore the crypto environment from the miners perspective.",
+                "spanish": "LTH Store es una tienda electrónica centrada en el negocio de la minería de criptomonedas, dirigido a entusiastas de las criptomonedas y empresas que desean explorar el entorno de las criptomonedas desde la perspectiva de los mineros."
+            },
             "image": "lth-store.png",
             "link": "https://lthstore-v3.netlify.app/",
             "github": "https://github.com/bit-rec98/LTH_Store.git"
         },
         {
             "id": 2,
-            "title": "Solid/Gradient palette generator app",
-            "description": "This app allows to generate and copy different solid and gradient color hex codes to use them in any project. Either the users are designers or web developers, this app will help them to get interesting colors and gradient combinations",
+            "title": {
+                "english": "Solid and Gradient color palettes generator app",
+                "spanish": "Generador de paletas de colores sólidas y degradadas"
+            },
+            "description": {
+                "english": "This app allows to generate and copy different solid and gradient color hex codes to use them in any project. Either the users are designers or web developers, this app will help them to get interesting colors and gradient combinations",
+                "spanish": "Esta aplicación permite generar y copiar diferentes códigos hexadecimales de colores sólidos y degradados para usarlos en cualquier proyecto. Ya sean diseñadores o desarrolladores web, esta aplicación les ayudará a obtener combinaciones interesantes de colores y degradados."
+            },
             "image": "palette-generator-app.png",
             "link": "https://palettesgenerator.netlify.app/",
             "github": "https://github.com/bit-rec98/Color_Palette_Generator.git"

@@ -1,10 +1,9 @@
 import NavItems from "./navbar/NavItems";
 import "../css/navbar.css";
 import { useLocation } from "react-router";
+import TriggerResponsiveMenu from "./navbar/TriggerResponsiveMenu";
 
-// {darkMode, handleDarkMode}
-
-const Navbar = ({handleDarkMode, darkMode}) => {
+const Navbar = ({handleDarkMode, darkMode, spanishLanguage, handleTranslation}) => {
     const location = useLocation();
     const isIndex = location.pathname === "/";
 
@@ -12,21 +11,40 @@ const Navbar = ({handleDarkMode, darkMode}) => {
         <header>
             <nav className={darkMode ? "darkMode" : ""} id="navbar">
                 {isIndex ? (
-                    <button
-                        id="theme-btn"
-                        className={darkMode ? "darkMode" : ""}
-                        onClick={handleDarkMode}
-                    ></button>
-                ) : (
                     <>
-                        <NavItems 
-                        darkMode={darkMode} 
-                        />
+                        <button
+                            id="translate-btn"
+                            onClick={handleTranslation}
+                            className={darkMode ? "darkMode" : ""}
+                            >
+                                {spanishLanguage ? "English" : "Español"}
+                        </button>
                         <button
                             id="theme-btn"
                             className={darkMode ? "darkMode" : ""}
                             onClick={handleDarkMode}
-                        ></button>
+                        />
+
+                    </>
+                ) : (
+                    <>
+                        <NavItems 
+                        darkMode={darkMode}
+                        spanishLanguage={spanishLanguage}
+                        />
+                        <button
+                            id="translate-btn"
+                            onClick={handleTranslation}
+                            className={darkMode ? "darkMode" : ""}
+                            >
+                                {spanishLanguage ? "English" : "Español"}
+                        </button>
+                        <button
+                            id="theme-btn"
+                            className={darkMode ? "darkMode" : ""}
+                            onClick={handleDarkMode}
+                        />
+                        <TriggerResponsiveMenu darkMode={darkMode} spanishLanguage={spanishLanguage}></TriggerResponsiveMenu>
                     </>
                 )}
             </nav>

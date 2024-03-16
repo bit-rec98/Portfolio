@@ -2,7 +2,7 @@
 import "./App.css";
 import "../src/css/polygons.css";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
@@ -12,7 +12,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-import UsageTerms from "./pages/UsageTerms";
 import NotFound from "./pages/NotFound";
 
 import PolygonA from "../src/components/polygons/PolygonA";
@@ -23,64 +22,86 @@ import PolygonE from "./components/polygons/PolygonE";
 import PolygonF from "./components/polygons/PolygonF";
 
 const App = () => {
+  const [darkMode, setDarkMode] = useState(() => {
+    const storedTheme = localStorage.getItem("theme");
+    return storedTheme === "dark";
+  });
 
-  const [darkMode, setDarkMode] = useState(false);
+  useEffect(() => {
+    localStorage.setItem("theme", darkMode ? "dark" : "light");
+  }, [darkMode]);
+
   const handleDarkMode = () => {
-    darkMode ? setDarkMode(false) : setDarkMode(true);
-    console.log(darkMode);
+    setDarkMode(!darkMode);
   };
 
-  const [spanish, setSpanish] = useState(false);
-    const handleTranslation = () => {
-        setSpanish(true);
-    };
+  const [spanishLanguage, setSpanishLanguage] = useState(() => {
+    const storedLanguage = localStorage.getItem('language');
+    return storedLanguage === 'spanish';
+  });
+
+  useEffect(() => {
+    localStorage.setItem('language', spanishLanguage ? 'spanish' : 'english');
+  }, [spanishLanguage]);
+
+  const handleTranslation = () => {
+    setSpanishLanguage(!spanishLanguage);
+  };
 
   return (
     <>
       <BrowserRouter>
         <main id="main-container" className={darkMode ? "darkMode" : ""}>
-          <Navbar handleDarkMode={handleDarkMode} darkMode={darkMode} handleTranslation={handleTranslation} spanishLanguage={spanish}/> 
+          <Navbar
+            handleDarkMode={handleDarkMode}
+            darkMode={darkMode}
+            handleTranslation={handleTranslation}
+            spanishLanguage={spanishLanguage}
+          />
           <Routes>
             <Route
               path="/"
               element={
-                <Index darkMode={darkMode} spanishLanguage={spanish}/>
+                <Index darkMode={darkMode} spanishLanguage={spanishLanguage} />
               }
             ></Route>
             <Route
               path="/home"
               element={
-                <Home darkMode={darkMode} spanishLanguage={spanish}/>
+                <Home darkMode={darkMode} spanishLanguage={spanishLanguage} />
               }
             ></Route>
             <Route
               path="/about"
               element={
-                <About darkMode={darkMode} spanishLanguage={spanish}/>
+                <About darkMode={darkMode} spanishLanguage={spanishLanguage} />
               }
             ></Route>
             <Route
               path="/projects"
               element={
-                <Projects darkMode={darkMode} spanishLanguage={spanish}/>
+                <Projects
+                  darkMode={darkMode}
+                  spanishLanguage={spanishLanguage}
+                />
               }
             ></Route>
             <Route
               path="/contact"
               element={
-                <Contact darkMode={darkMode} spanishLanguage={spanish}/>
-              }
-            ></Route>
-            <Route
-              path="/terms"
-              element={
-                <UsageTerms darkMode={darkMode} spanishLanguage={spanish}/>
+                <Contact
+                  darkMode={darkMode}
+                  spanishLanguage={spanishLanguage}
+                />
               }
             ></Route>
             <Route
               path="/*"
               element={
-                <NotFound darkMode={darkMode} spanishLanguage={spanish}/>
+                <NotFound
+                  darkMode={darkMode}
+                  spanishLanguage={spanishLanguage}
+                />
               }
             ></Route>
           </Routes>
@@ -90,7 +111,11 @@ const App = () => {
           <PolygonD />
           <PolygonE />
           <PolygonF />
-          <Footer darkMode={darkMode} handleTranslation={handleTranslation} spanishLanguage={spanish} />
+          <Footer
+            darkMode={darkMode}
+            handleTranslation={handleTranslation}
+            spanishLanguage={spanishLanguage}
+          />
         </main>
       </BrowserRouter>
     </>

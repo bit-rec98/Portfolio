@@ -6,8 +6,9 @@
     justify-content: space-evenly;
 }
 
-h1{
-    font-size: 2rem;
+#contact-section h1{
+    font-size: 3rem;
+    font-weight: 500;
     margin-bottom: 1rem;
 }
 

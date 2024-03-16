@@ -39,7 +39,7 @@ p{
     border-bottom: 1px solid #222;
 }
 #qss-link:hover{
-    border-bottom: 1px solid #00ffff;
+    border-bottom: 1px solid #ff0000;
 }
 
 .about-subtitle{
@@ -57,7 +57,9 @@ p{
 #about-section.darkMode #qss-link:hover{
     border-bottom: 1px solid #00ffff;
 }
-
+#qss-link.darkMode{
+    border-bottom: 1px solid #00ffff;
+}
 
 /* Responsive */
 @media screen and (max-width: 1024){

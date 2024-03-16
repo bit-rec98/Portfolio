@@ -20,11 +20,6 @@
     margin-right: auto;
 }
 
-.navbar-list-item{
-    margin: 1rem;
-    padding: 1rem;
-}
-
 .navbar-item{
     color: #121212;
     text-decoration: none;
@@ -39,13 +34,31 @@
 
 #theme-btn {
     padding: 1rem;
-    margin: 1rem;
+    margin: .5rem 1rem;
     border: 1px solid #121212;
     border-radius: 4rem;
     background-color: #121212;
     cursor: pointer;
     box-shadow: 0 0 .5rem #121212; /* Initial box-shadow with .5rem spread */
-    transition: .5s; /* Transition for box-shadow property */
+    transition: box-shadow .5s; /* Transition for box-shadow property */
+}
+
+#translate-btn{
+    padding: .5rem;
+    margin: .5rem 1rem;
+    border: 1px solid #121212;
+    border-radius: .5rem;
+    background-color: #121212;
+    color: #F5F5F5;
+    cursor: pointer;
+    box-shadow: 0 0 0 #121212;
+    transition: box-shadow .5s, background-color .5s, color .5s;
+}
+
+#translate-btn:hover{
+    background-color: #F5F5F5;
+    color: #121212;
+    box-shadow: 0 0 .5rem #121212;
 }
 
 /* Dark mode */
@@ -70,4 +83,33 @@
 }
 .navbar-item.darkMode:hover{
     border-bottom: 1px solid #F5F5F5;
+}
+
+#translate-btn.darkMode{
+    background-color: #F5F5F5;
+    color: #121212;
+    border: 1px solid #F5F5F5;
+    box-shadow: 0 0 .5rem #F5F5F5cc;
+}
+
+#translate-btn.darkMode:hover{
+    background-color: #121212;
+    color: #F5F5F5;
+    border: 1px solid #F5F5F5;
+    box-shadow: 0 0 1rem #F5F5F5;
+}
+
+@media screen and (min-width: 769px) {
+    #navLateral-menu{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #navbar-items{
+        display: none;
+    };
+    #navLateral-menu{
+        display: inline-block;
+    };
 }

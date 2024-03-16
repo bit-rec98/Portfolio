@@ -1,40 +1,8 @@
-/* .poppins-regular {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.poppins-light {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.poppins-medium {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.poppins-semibold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.poppins-bold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-} */
-
 :root{
-  /* General rules */
   --lightModeColor: "#F5F5F5";
   --darkModeColor: "#121212";
   --backgroundColorLightMode: "#F5F5F5";
   --backgroundColorDarkMode: "#121212";
-
 }
 
 * {
@@ -48,7 +16,6 @@
     sans-serif;
 }
 
-/* Main */
 #main-container {
   min-width: 100%;
   display: flex;
@@ -107,7 +74,7 @@ html {
     scrollbar-darkshadow-color: transparent; /* Set the color of the scrollbar bottom shadow */
 }
 
-@media screen and (max-width: 1600px){
+@media screen and (max-width: 1900px){
   #main-container{
     max-width: 100%;
   }

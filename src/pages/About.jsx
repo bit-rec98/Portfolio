@@ -6,32 +6,47 @@ import { technologies } from "../data/technologies.json";
 import ContactForm from "../components/about/ContactForm";
 
 const About = ({darkMode, spanishLanguage}) => {
+
   return (
     <section id="about-section" className={darkMode ? "darkMode" : ""}>
-      <h1 id="about-title">About me</h1>
+      <h1 id="about-title">{spanishLanguage ? "Acerca de mí" : "About me"}</h1>
       <article>
         <p>
-          I am Fullstack web(3) student focused on learning MERN/MEAN stack as
+          {spanishLanguage ? 
+          <>
+            Soy estudiante de desarrollo web(3) Full Stack y estoy enfocado en el aprendizaje de los stacks MERN/MEAN así como Solidity para el entorno web y los contratos inteligentes mediante cursos, lectura de documentación oficial y autodidactismo a largo plazo. Además, soy estudiante autodidacta de diseño UX/UI mediante estudio de contenido afín a esta etapa de diseño de un proyecto.
+            <br />
+            Además de mis estudios, estoy participando en la construcción de
+            <a href="#" target="_blank" id="qss-link" className={darkMode ? "darkMode" : ""}>
+              QuantumScript Services
+            </a>
+            , la cual es una agencia de desarrollo de aplicaciones web y servicios IT para negocios que necesiten un diseño innovador, eficiente y acorde a las mejores prácticas de la industria.
+          </> 
+          : 
+          <>
+          I am Full Stack web(3) student focused on learning MERN/MEAN stack as
           well as Solidity for smart contracts development both by attending
           courses, reading documentation and self-teaching on the long term.
-          Also, I am self-taught learner on UX/UI design and I am participating
+          Also, I am self-taught learner on UX/UI design via studying related content to this stage of a project development.  
+          <br />
+          Also, I am participating
           in building
           <a href="#" target="_blank" id="qss-link">
             QuantumScript Services
-          </a>
-          , which is a website development agency for businesses which require
-          an innovative design, efficient and optimized architecture.
+          </a>, which is a web apps development and IT services agency for businesses which require
+          an innovative design, efficient and build following the best practices applied in the industry.
+          </>}
+          
         </p>
       </article>
       <hr />
       <article>
-        <h2 className="about-subtitle">Tech stack</h2>
+        <h2 className="about-subtitle">{spanishLanguage ? "Stack de tecnologías" : "Tech stack"}</h2>
         <p>
-          Here below you will see my current tech stack sorted by environment
-          type
+          {spanishLanguage ? "A continuación podrán ver las tecnologías que sé utilizar organizadas por su correspondiente tipo de propósito" : "Here below you will see my current tech stack sorted by its corresponding purpose type"} 
         </p>
         <div id="tech-stack-container">
-          <h3>Frontend Development and Design</h3>
+          <h3>{spanishLanguage ? "Desarrollo Frontend y Diseño" : "Frontend Development and Design"}</h3>
           <div className="technology-container">
             {technologies &&
               technologies.map((technology) => {
@@ -47,7 +62,7 @@ const About = ({darkMode, spanishLanguage}) => {
               })}
           </div>
           <hr />
-          <h3>Backend Development</h3>
+          <h3>{spanishLanguage ? "Desarrollo Backend" : "Backend Development"}</h3>
           <div className="technology-container">
             {technologies &&
               technologies.map((technology) => {
@@ -63,7 +78,7 @@ const About = ({darkMode, spanishLanguage}) => {
               })}
           </div>
           <hr />
-          <h3>Database Management Systems and ODMs</h3>
+          <h3>{spanishLanguage ? "Sistemas de gestión de bases de datos y ODMs" : "Database Management Systems and ODMs"}</h3>
           <div className="technology-container">
             {technologies &&
               technologies.map((technology) => {
@@ -91,7 +106,7 @@ const About = ({darkMode, spanishLanguage}) => {
               })}
           </div>
           <hr />
-          <h3>Version control systems</h3>
+          <h3>{spanishLanguage ? "Sistemas de control de versiones" : "Version control systems"}</h3>
           <div className="technology-container">
           {
             technologies && technologies.map((technology) => {
@@ -106,14 +121,13 @@ const About = ({darkMode, spanishLanguage}) => {
               }
             })
           }
-
           </div>
         </div>
       </article>
       <hr />
       <article>
         <h2 className="about-subtitle">
-          Leave me a message so I can contact you!
+          {spanishLanguage ? "¡Dejame un mensaje para poder contactarte!" : "Leave me a message so I can contact you!"}
         </h2>
         <ContactForm darkMode={darkMode} spanishLanguage={spanishLanguage} />
       </article>

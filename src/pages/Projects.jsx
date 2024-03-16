@@ -6,7 +6,7 @@ const Projects = ({darkMode, spanishLanguage}) => {
 
   return (
     <section id="projects-section" className={darkMode ? "darkMode" : ""}>
-        <h1>Explore my projects here below!</h1>
+        <h1>{spanishLanguage ? "¡Explorá mis proyectos realizados!" : "Explore my projects here below!"}</h1>
         <article>
           <div id="projects-container">
             {projects.map((project) => (
