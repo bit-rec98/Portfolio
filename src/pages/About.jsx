@@ -4,6 +4,7 @@ import "../css/contactForm.css";
 import Technology from "../components/about/Technology";
 import { technologies } from "../data/technologies.json";
 import ContactForm from "../components/about/ContactForm";
+// import TechnologySlider from "../components/about/TechnologySlider";
 
 const About = ({darkMode, spanishLanguage}) => {
 
@@ -17,7 +18,7 @@ const About = ({darkMode, spanishLanguage}) => {
             Soy estudiante de desarrollo web(3) Full Stack y estoy enfocado en el aprendizaje de los stacks MERN/MEAN así como Solidity para el entorno web y los contratos inteligentes mediante cursos, lectura de documentación oficial y autodidactismo a largo plazo. Además, soy estudiante autodidacta de diseño UX/UI mediante estudio de contenido afín a esta etapa de diseño de un proyecto.
             <br />
             Además de mis estudios, estoy participando en la construcción de
-            <a href="#" target="_blank" id="qss-link" className={darkMode ? "darkMode" : ""}>
+            <a href="https://quantumscript.services" target="_blank" rel="noreferrer" id="qss-link" className={darkMode ? "darkMode" : ""}>
               QuantumScript Services
             </a>
             , la cual es una agencia de desarrollo de aplicaciones web y servicios IT para negocios que necesiten un diseño innovador, eficiente y acorde a las mejores prácticas de la industria.
@@ -31,12 +32,11 @@ const About = ({darkMode, spanishLanguage}) => {
           <br />
           Also, I am participating
           in building
-          <a href="#" target="_blank" id="qss-link">
+          <a href="https://quantumscript.services" target="_blank" rel="noreferrer" id="qss-link" className={darkMode ? "darkMode" : ""}>
             QuantumScript Services
           </a>, which is a web apps development and IT services agency for businesses which require
           an innovative design, efficient and build following the best practices applied in the industry.
           </>}
-          
         </p>
       </article>
       <hr />
@@ -49,17 +49,20 @@ const About = ({darkMode, spanishLanguage}) => {
           <h3>{spanishLanguage ? "Desarrollo Frontend y Diseño" : "Frontend Development and Design"}</h3>
           <div className="technology-container">
             {technologies &&
-              technologies.map((technology) => {
-                if (technology.type === "frontend") {
-                  return (
-                    <Technology
-                      key={technology.id}
-                      technologyData={technology}
-                      darkMode={darkMode}
-                    />
-                  );
-                }
-              })}
+                  technologies.map((technology) => {
+                    if (technology.type === "frontend") {
+                      return (
+                        <Technology
+                          key={technology.id}
+                          technologyData={technology}
+                          darkMode={darkMode}
+                        />
+                      );
+                    }
+                  }
+                )
+              }
+          {/* <TechnologySlider technologiesData={technologies} darkMode={darkMode} technologyType="frontend"/> -> Agregar en mobile */}
           </div>
           <hr />
           <h3>{spanishLanguage ? "Desarrollo Backend" : "Backend Development"}</h3>

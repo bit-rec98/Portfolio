@@ -51,20 +51,21 @@
     background-color: #121212;
     color: #F5F5F5;
     cursor: pointer;
-    box-shadow: 0 0 0 #121212;
+    box-shadow: 0 0 .5rem #121212;
     transition: box-shadow .5s, background-color .5s, color .5s;
+}
+
+#theme-btn:hover {
+    box-shadow: 0 0 1.5rem #121212; /* Override box-shadow for spreading 1.5rem on hover */
 }
 
 #translate-btn:hover{
     background-color: #F5F5F5;
     color: #121212;
-    box-shadow: 0 0 .5rem #121212;
+    box-shadow: 0 0 1rem #121212;
 }
 
 /* Dark mode */
-#theme-btn:hover {
-    box-shadow: 0 0 1.5rem #121212; /* Override box-shadow for spreading 1.5rem on hover */
-}
 #navbar.darkMode{
     background-color: #121212;
 }

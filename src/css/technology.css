@@ -21,7 +21,7 @@
     padding: 1.5rem;
     border: 1px solid transparent;
     border-radius: 1rem;
-    background-color: #CCCCCC40;
+    background-color: #BBBBBB40;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,7 +43,7 @@
 }
 
 .technology__ .technology__item .technology__text{
-    color: #222;
+    color: #222222;
     font-size: 1.5rem;
     text-align: center;
     margin: .5rem 0;
