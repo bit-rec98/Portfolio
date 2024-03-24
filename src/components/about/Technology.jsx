@@ -10,7 +10,7 @@ const Technology = ({ technologyData, darkMode }) => {
         >
             <figure className="technology__item">
                 <img
-                src={`/src/assets/stack-logos/${technologyData.logo}`}
+                src={`/img/stack-logos/${technologyData.logo}`}
                 alt={`${technologyData.name}`}
                 className="technology__logo"
                 />

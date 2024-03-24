@@ -8,7 +8,7 @@ const Project = ({ projectData, darkMode, spanishLanguage }) => {
       <figure className="project-item">
         <a href={projectData.link} target="_blank" rel="noreferrer">
           <img
-            src={`/src/assets/img/projects/${projectData.image}`}
+            src={`/img/projects/${projectData.image}`}
             alt={spanishLanguage
                 ? projectData.title.spanish
                 : projectData.title.english}

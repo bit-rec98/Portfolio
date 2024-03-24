@@ -10,7 +10,7 @@
                 "english": "LTH store is an ecommerce focused on the business of cryptocurrency mining sells for crypto enthusiasts and companies who want to explore the crypto environment from the miners perspective.",
                 "spanish": "LTH Store es una tienda electrónica centrada en el negocio de la minería de criptomonedas, dirigido a entusiastas de las criptomonedas y empresas que desean explorar el entorno de las criptomonedas desde la perspectiva de los mineros."
             },
-            "image": "lth-store.png",
+            "image": "lth-store.webp",
             "link": "https://lthstore-v3.netlify.app/",
             "github": "https://github.com/bit-rec98/LTH_Store.git"
         },
@@ -24,7 +24,7 @@
                 "english": "This app allows to generate and copy different solid and gradient color hex codes to use them in any project. Either the users are designers or web developers, this app will help them to get interesting colors and gradient combinations",
                 "spanish": "Esta aplicación permite generar y copiar diferentes códigos hexadecimales de colores sólidos y degradados para usarlos en cualquier proyecto. Ya sean diseñadores o desarrolladores web, esta aplicación les ayudará a obtener combinaciones interesantes de colores y degradados."
             },
-            "image": "palette-generator-app.png",
+            "image": "palette-generator-app.webp",
             "link": "https://palettesgenerator.netlify.app/",
             "github": "https://github.com/bit-rec98/Color_Palette_Generator.git"
         }
