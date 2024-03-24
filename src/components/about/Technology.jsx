@@ -13,6 +13,7 @@ const Technology = ({ technologyData, darkMode }) => {
                 src={`/img/stack-logos/${technologyData.logo}`}
                 alt={`${technologyData.name}`}
                 className="technology__logo"
+                loading="lazy"
                 />
                 <p
                 className={darkMode ? "technology__text darkMode" : "technology__text"}
