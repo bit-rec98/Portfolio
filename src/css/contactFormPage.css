@@ -49,7 +49,8 @@ hr{
 
 #form-send-button{
     padding: 1rem;
-    margin: .5rem auto;
+    margin: 1rem auto;
+    margin-bottom: 2.5rem;
     width: 50%;
     font-size: 1rem;
     cursor: pointer;

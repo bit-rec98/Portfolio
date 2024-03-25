@@ -41,6 +41,7 @@
 }
 
 #send-button{
+    margin-bottom: 2.5rem;
     padding: 1rem;
     font-size: 1rem;
     cursor: pointer;

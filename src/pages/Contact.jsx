@@ -1,10 +1,25 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from '@emailjs/browser'
 import "../css/contactFormPage.css";
+import { Alert } from "@mui/material";
 
 const Contact = ({ darkMode, spanishLanguage }) => {
 
+  const [submissionStatus, setSubmissionStatus] = useState(null);
   const form = useRef();
+
+  useEffect(() => {
+    if (submissionStatus === "success") {
+      // Clear input fields after successful submission
+      form.current.reset();
+
+      const timeout = setTimeout(() => {
+        setSubmissionStatus(null);
+      }, 10000);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [submissionStatus]);
 
   useEffect(() => {
     emailjs.init({
@@ -19,12 +34,19 @@ const Contact = ({ darkMode, spanishLanguage }) => {
       .sendForm('contact_service', 'portfolio_form', form.current)
       .then(
         (res) => {
-          console.log('SUCCESS!', res.status, res.text);
+          setSubmissionStatus('success');
+          // console.log('SUCCESS!', res.status, res.text);
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          setSubmissionStatus('error');
+          // console.error('Error sending email:', error);
         }
-      );
+      )
+      .catch(error => {
+        setSubmissionStatus('error');
+        // console.error('Error sending email:', error);
+      });
+      
   };
 
   return (
@@ -76,6 +98,18 @@ const Contact = ({ darkMode, spanishLanguage }) => {
         <button id="form-send-button" type="submit">
           {spanishLanguage ? "¡Enviar!" : "Send!"}
         </button>
+        <div>
+          {submissionStatus === 'success' && (
+            <Alert variant="filled" severity="success">
+              {spanishLanguage ? "¡Mensaje enviado exitosamente!" : "Message sent successfully!"}
+            </Alert>
+          )}
+          {submissionStatus === 'error' && (
+            <Alert variant="filled" severity="error">
+              {spanishLanguage ? "¡Hubo un error al enviar el mensaje!" : "There was an error sending the message!"}
+            </Alert>
+          )}
+        </div>
       </form>
     </section>
   );
