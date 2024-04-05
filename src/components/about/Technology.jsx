@@ -2,11 +2,8 @@ import "../../css/technology.css";
 
 const Technology = ({ technologyData, darkMode }) => {
     return (
-        <a
-        href={technologyData.link}
-        target="_blank"
-        rel="noreferrer"
-        className="technology__"
+        <div
+            className={darkMode ? "technology__ darkMode" : "technology__"}
         >
             <figure className="technology__item">
                 <img
@@ -15,13 +12,16 @@ const Technology = ({ technologyData, darkMode }) => {
                 className="technology__logo"
                 loading="lazy"
                 />
-                <p
+                <a
                 className={darkMode ? "technology__text darkMode" : "technology__text"}
+                href={technologyData.link}
+                target="_blank"
+                rel="noreferrer"
                 >
                     {`${technologyData.name}`}
-                </p>
+                </a>
             </figure>
-        </a>
+        </div>
     );
 };
 

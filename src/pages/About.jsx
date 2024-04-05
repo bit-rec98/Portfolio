@@ -4,6 +4,7 @@ import "../css/contactForm.css";
 import Technology from "../components/about/Technology";
 import { technologies } from "../data/technologies.json";
 import ContactForm from "../components/about/ContactForm";
+import TechnologySlider from "../components/about/TechnologySlider";
 // import TechnologySlider from "../components/about/TechnologySlider";
 
 const About = ({darkMode, spanishLanguage}) => {
@@ -47,8 +48,8 @@ const About = ({darkMode, spanishLanguage}) => {
         </p>
         <div id="tech-stack-container">
           <h3>{spanishLanguage ? "Desarrollo Frontend y Diseño" : "Frontend Development and Design"}</h3>
-          <div className="technology-container">
-            {technologies &&
+          <div className="technology-container"> {/*  */}
+            {/* {technologies &&
                   technologies.map((technology) => {
                     if (technology.type === "frontend") {
                       return (
@@ -61,13 +62,13 @@ const About = ({darkMode, spanishLanguage}) => {
                     }
                   }
                 )
-              }
-          {/* <TechnologySlider technologiesData={technologies} darkMode={darkMode} technologyType="frontend"/> -> Agregar en mobile */}
+              } */}
+          <TechnologySlider technologiesData={technologies} darkMode={darkMode} technologyType="frontend"/>
           </div>
           <hr />
           <h3>{spanishLanguage ? "Desarrollo Backend" : "Backend Development"}</h3>
           <div className="technology-container">
-            {technologies &&
+            {/* {technologies &&
               technologies.map((technology) => {
                 if (technology.type === "backend") {
                   return (
@@ -78,12 +79,13 @@ const About = ({darkMode, spanishLanguage}) => {
                     />
                   );
                 }
-              })}
+              })} */}
+            <TechnologySlider technologiesData={technologies} darkMode={darkMode} technologyType="backend"/>
           </div>
           <hr />
           <h3>{spanishLanguage ? "Sistemas de gestión de bases de datos y ODMs" : "Database Management Systems and ODMs"}</h3>
           <div className="technology-container">
-            {technologies &&
+            {/* {technologies &&
               technologies.map((technology) => {
                 if (technology.type === "dbms") {
                   return (
@@ -94,24 +96,13 @@ const About = ({darkMode, spanishLanguage}) => {
                     />
                   );
                 }
-              })}
-            {technologies &&
-              technologies.map((technology) => {
-                if (technology.type === "orm") {
-                  return (
-                    <Technology
-                      key={technology.id}
-                      technologyData={technology}
-                      darkMode={darkMode}
-                    />
-                  );
-                }
-              })}
+              })} */}
+            <TechnologySlider technologiesData={technologies} darkMode={darkMode} technologyType="dbms"/>
           </div>
           <hr />
           <h3>{spanishLanguage ? "Sistemas de control de versiones" : "Version control systems"}</h3>
           <div className="technology-container">
-          {
+          {/* {
             technologies && technologies.map((technology) => {
               if(technology.type === "vcs"){
                 return (
@@ -123,7 +114,8 @@ const About = ({darkMode, spanishLanguage}) => {
                 )
               }
             })
-          }
+          } */}
+            <TechnologySlider technologiesData={technologies} darkMode={darkMode} technologyType="vcs"/>
           </div>
         </div>
       </article>

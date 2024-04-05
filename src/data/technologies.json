@@ -132,14 +132,14 @@
             "name": "Mongoose",
             "logo": "mongoose-original.webp",
             "link": "https://mongoosejs.com/",
-            "type": "orm"
+            "type": "dbms"
         },
         {
             "id": 20,
             "name": "Sequelize",
             "logo": "sequelize-original.webp",
             "link": "https://sequelize.org/",
-            "type": "orm"
+            "type": "dbms"
         }
     ]
 }

@@ -2,43 +2,125 @@ import Slider from "react-slick";
 import Technology from "./Technology";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { VscArrowLeft, VscArrowRight, VscDebugBreakpointData } from "react-icons/vsc";
 
 const TechnologySlider = ({ technologiesData, darkMode, technologyType}) => {
 
+    function PrevArrow(props) {
+        const { className, style, onClick } = props;
+        
+        return (
+            <>
+                {
+                    darkMode ? 
+                    <VscArrowLeft 
+                        className={className} 
+                        onClick={onClick} 
+                        style={{ ...style, display: "block", color: "#f5f5f5" }}
+                    /> 
+                    : 
+                    <VscArrowLeft 
+                    className={className} 
+                    onClick={onClick} 
+                    style={{ ...style, display: "block", color: "#121212" }}
+                    />
+                }
+            </>
+        );
+    }
+    function NextArrow(props) {
+        const { className, style, onClick } = props;
+
+        return (
+            <>
+                {
+                    darkMode ? 
+                    <VscArrowRight 
+                        className={className} 
+                        onClick={onClick} 
+                        style={{ ...style, display: "block", color: "#f5f5f5" }} 
+                    />
+                    : 
+                    <VscArrowRight 
+                        className={className} 
+                        onClick={onClick} 
+                        style={{ ...style, display: "block", color: "#121212" }}
+                    />
+                }
+            </>
+        );
+    }
+
     const settings = {
-        dots: false,
-        infinite: true,
+        customPaging: function() {
+            return (
+            <a>
+                {
+                    darkMode ? <VscDebugBreakpointData style={{color: "#f5f5f5"}} /> : <VscDebugBreakpointData style={{color: "#121212"}} />
+                }
+            </a>
+            );
+        },
+        lazyLoad: false,
+        dots: true,
+        arrows: false,
+        infinite: false,
+        draggable: true,
         speed: 700,
-        slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToShow: 3,
+        slidesToScroll: 1.5,
         initialSlide: 0,
-        draggable: false,
+        prevArrow: <PrevArrow />,
+        nextArrow: <NextArrow />,
         responsive: [
+            {
+                breakpoint: 1176,
+                settings: {
+                    slidesToShow: 2.5,
+                    slidesToScroll: 1,
+                    infinite: false,
+                    dots: true,
+                    arrows: false
+                }
+            },
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
-                    infinite: true,
-                    dots: false,
-                    arrows: true
+                    infinite: false,
+                    dots: true,
+                    arrows: false
                 }
             },
+            /* {
+                breakpoint: 820,
+                settings: {
+                    slidesToShow: 1.5,
+                    slidesToScroll: 1,
+                    infinite: false,
+                    dots: true,
+                    arrows: false
+                }
+            }, */
             {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                    dots: false,
-                    arrows: false
+                    dots: true,
+                    arrows: false,
+                    draggable: true,
+                    infinite: true
                 }
             },
-            
             {
                 breakpoint: 576,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 1.5,
                     slidesToScroll: 1,
+                    infinite: false,
+                    draggable: true,
                     dots: false,
                     arrows: false
                 }
@@ -48,8 +130,10 @@ const TechnologySlider = ({ technologiesData, darkMode, technologyType}) => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    infinite: false,
                     dots: false,
-                    arrows: false
+                    arrows: false,
+                    draggable: true
                 }
             }
         ]

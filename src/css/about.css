@@ -62,9 +62,9 @@ p{
 }
 
 /* Responsive */
-@media screen and (max-width: 1024){
+@media screen and (max-width: 1024px){
     #about-section{
-        padding: .5rem 2rem;
+        padding: .5rem 3rem;
     }
     #about-title{
         font-size: 3rem;
