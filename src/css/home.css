@@ -1,0 +1,109 @@
+/* Home page */
+#home-section{
+    padding: 1rem 4rem;
+}
+
+#home-section div{
+    padding: 0 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#home-section h1{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+#home-section-container{
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.home-item{
+    margin: 1rem;
+    padding: 5.5rem;
+    border: 1px solid transparent;
+    color: #222;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    box-shadow: 0 0 0 transparent;
+    background-color: transparent;
+    transition: background-color .5s, box-shadow .5s;
+}
+
+.home-item:hover{
+    background-color: #22222233;
+    box-shadow: 0 0 .5rem #333;
+}
+
+/* DarkMode */
+#home-section.darkMode h1{
+    color: #f5f5f5;
+}
+#home-section.darkMode .home-item{
+    color: #f5f5f5;
+    box-shadow: 0 0 0 transparent;
+    background-color: transparent;
+    transition: background-color .5s, box-shadow .5s;
+}
+#home-section.darkMode .home-item:hover{
+    background-color: #f5f5f533;
+    box-shadow: 0 0 .5rem #f5f5f5;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px){
+    #home-section{
+        padding: .5rem 2rem;
+    }
+    #home-section h1{
+        font-size: 2.5rem;
+    }
+    .home-item{
+        padding: 3rem;
+        margin: 1rem;
+    }
+}
+@media screen and (max-width: 768px){
+    #home-section{
+        padding: .5rem 1.5rem;
+    }
+    
+    #home-section h1{
+        font-size: 2rem;
+    }
+    
+    .home-item{
+        padding: 2rem 1.5rem;
+    }
+}
+@media screen and (max-width: 576px){
+    #home-section{
+        padding: 0 1.5rem;
+    }
+    
+    #home-section h1{
+        font-size: 1.5rem;
+    }
+    .home-item{
+        padding: 1.5rem 1rem;
+    }
+}
+
+@media screen and (max-width: 480px){
+    #home-section{
+        padding: 0 1rem;
+    }
+    .home-item{
+        padding: 1rem .5rem;
+    }
+}

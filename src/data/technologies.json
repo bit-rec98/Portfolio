@@ -1,0 +1,145 @@
+{
+    "technologies": [
+        {
+            "id": 1,
+            "name": "HTML5",
+            "logo": "html5-original.webp",
+            "link": "https://developer.mozilla.org/en/docs/Web/HTML",
+            "type": "frontend"
+
+        },
+        {
+            "id": 2,
+            "name": "CSS3",
+            "logo": "css3-original.webp",
+            "link": "https://developer.mozilla.org/en/docs/Web/CSS",
+            "type": "frontend"
+        },
+        {
+            "id": 3,
+            "name": "JavaScript",
+            "logo": "javascript-original.webp",
+            "link": "https://developer.mozilla.org/en/docs/Web/JavaScript",
+            "type": "frontend"
+        },
+        {
+            "id": 4,
+            "name": "Bootstrap",
+            "logo": "bootstrap-original.webp",
+            "link": "https://getbootstrap.com/",
+            "type": "frontend"
+        },
+        {
+            "id": 5,
+            "name": "Sass",
+            "logo": "sass-original.webp",
+            "link": "https://sass-lang.com/",
+            "type": "frontend"
+        },
+        {
+            "id": 6,
+            "name": "React",
+            "logo": "react-original.webp",
+            "link": "https://react.dev/",
+            "type": "frontend"
+        },
+        {
+            "id": 7,
+            "name": "Redux",
+            "logo": "redux.webp",
+            "link": "https://redux.js.org/",
+            "type": "frontend"
+        },
+        {
+            "id": 8,
+            "name": "Figma",
+            "logo": "figma-original.webp",
+            "link": "https://www.figma.com/",
+            "type": "frontend"
+        },
+        {
+            "id": 9,
+            "name": "TailwindCSS",
+            "logo": "tailwindcss-original.webp",
+            "link": "https://tailwindcss.com/",
+            "type": "frontend"
+        },
+        {
+            "id": 10,
+            "name": "Material UI",
+            "logo": "material-ui.webp",
+            "link": "https://mui.com/",
+            "type": "frontend"
+        },
+        {
+            "id": 11,
+            "name": "Git",
+            "logo": "git-original.webp",
+            "link": "https://git-scm.com/",
+            "type": "vcs"
+        },
+        {
+            "id": 12,
+            "name": "GitHub",
+            "logo": "github-original.webp",
+            "link": "https://github.com/",
+            "type": "vcs"
+        },
+        {
+            "id": 13,
+            "name": "Node.js",
+            "logo": "nodejs-original.webp",
+            "link": "https://nodejs.org/en",
+            "type": "backend"
+        },
+        {
+            "id": 14,
+            "name": "Express.js",
+            "logo": "express-original-wordmark.webp",
+            "link": "https://expressjs.com/",
+            "type": "backend"
+        },
+        {
+            "id": 15,
+            "name": "Solidity",
+            "logo": "solidity-original.webp",
+            "link": "https://soliditylang.org/",
+            "type": "backend"
+        },
+        {
+            "id": 16,
+            "name": "Axios",
+            "logo": "axios-plain.webp",
+            "link": "https://axios-http.com/",
+            "type": "backend"
+        },
+        {
+            "id": 17,
+            "name": "MongoDB",
+            "logo": "mongodb-original.webp",
+            "link": "https://www.mongodb.com/",
+            "type": "dbms"
+        },
+        {
+            "id": 18,
+            "name": "MySQL",
+            "logo": "mysql-original.webp",
+            "link": "https://dev.mysql.com/",
+            "type": "dbms"
+        },
+        {
+            "id": 19,
+            "name": "Mongoose",
+            "logo": "mongoose-original.webp",
+            "link": "https://mongoosejs.com/",
+            "type": "dbms"
+        },
+        {
+            "id": 20,
+            "name": "Sequelize",
+            "logo": "sequelize-original.webp",
+            "link": "https://sequelize.org/",
+            "type": "dbms"
+        }
+    ]
+}

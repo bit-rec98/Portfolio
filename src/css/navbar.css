@@ -1,0 +1,116 @@
+/* Header/navbar */
+#navbar{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #F5F5F5;
+    transition: .5s;
+    height: 5.5rem;
+}
+
+#navbar-items{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: auto;
+}
+
+.navbar-item{
+    color: #121212;
+    text-decoration: none;
+    margin: 1rem;
+    padding: .5rem 1rem;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom .5s;
+}
+.navbar-item:hover{
+    border-bottom: 1px solid #121212;
+}
+
+#theme-btn {
+    padding: 1rem;
+    margin: .5rem 1rem;
+    border: 1px solid #121212;
+    border-radius: 4rem;
+    background-color: #121212;
+    cursor: pointer;
+    box-shadow: 0 0 .5rem #121212; /* Initial box-shadow with .5rem spread */
+    transition: box-shadow .5s; /* Transition for box-shadow property */
+}
+
+#translate-btn{
+    padding: .5rem;
+    margin: .5rem 1rem;
+    border: 1px solid #121212;
+    border-radius: .5rem;
+    background-color: #121212;
+    color: #F5F5F5;
+    cursor: pointer;
+    box-shadow: 0 0 .5rem #121212;
+    transition: box-shadow .5s, background-color .5s, color .5s;
+}
+
+#theme-btn:hover {
+    box-shadow: 0 0 1.5rem #121212; /* Override box-shadow for spreading 1.5rem on hover */
+}
+
+#translate-btn:hover{
+    background-color: #F5F5F5;
+    color: #121212;
+    box-shadow: 0 0 1rem #121212;
+}
+
+/* Dark mode */
+#navbar.darkMode{
+    background-color: #121212;
+}
+#theme-btn.darkMode{
+    background-color: #F5F5F5;
+    border: 1px solid #F5F5F5;
+    box-shadow: 0 0 .5rem #F5F5F5;
+    transition: box-shadow 0.5s;
+}
+#theme-btn.darkMode:hover{
+    box-shadow: 0 0 1.5rem #F5F5F5;
+}
+
+.navbar-item.darkMode{
+    color: #F5F5F5
+}
+.navbar-item.darkMode:hover{
+    border-bottom: 1px solid #F5F5F5;
+}
+
+#translate-btn.darkMode{
+    background-color: #F5F5F5;
+    color: #121212;
+    border: 1px solid #F5F5F5;
+    box-shadow: 0 0 .5rem #F5F5F5cc;
+}
+
+#translate-btn.darkMode:hover{
+    background-color: #121212;
+    color: #F5F5F5;
+    border: 1px solid #F5F5F5;
+    box-shadow: 0 0 1rem #F5F5F5;
+}
+
+@media screen and (min-width: 769px) {
+    #navLateral-menu{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #navbar-items{
+        display: none;
+    };
+    #navLateral-menu{
+        display: inline-block;
+    };
+}

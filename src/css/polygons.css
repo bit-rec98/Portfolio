@@ -1,0 +1,241 @@
+/* Triangles */
+.polygon-a{
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    z-index: -10;
+    width: 320px;
+}
+.polygon-b{
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    z-index: -10;
+    width: 320px;
+}
+
+/* Circles */
+.polygon-c{
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    z-index: -10;
+    width: 320px;
+}
+.polygon-d{
+    position: absolute;
+    top: 45%;
+    left: 25%;
+    z-index: -10;
+    width: 320px;
+}
+
+/* Squares */
+.polygon-e{
+    position: absolute;
+    top: 25%;
+    left: 65%;
+    z-index: -10;
+    width: 320px;
+}
+.polygon-f{
+    position: absolute;
+    top: 20%;
+    left: 70%;
+    z-index: -10;
+    width: 320px;
+}
+
+/* Animation settings */
+@keyframes glitch {
+    0% { transform: scaleY(1) translateY(0); }
+    25% { transform: scaleY(1) translateY(1rem) translateX(1rem) }
+    50% { transform: scaleY(1) scaleX(1) translateY(-1rem); }
+    75% { transform: scaleY(1) translateY(1.5rem) translateX(-1rem); }
+    100% { transform: scaleY(1) translateY(0); }
+}
+
+/* Timaxgs */
+.polygon-a{
+    animation: glitch 5000ms infinite;
+}
+.polygon-b{
+    animation: glitch 5500ms infinite;
+}
+.polygon-c{
+    animation: glitch 7000ms infinite;
+}
+.polygon-d {
+    animation: glitch 7500ms infinite;
+}
+.polygon-e{
+    animation: glitch 4000ms infinite;
+}
+.polygon-f {
+    animation: glitch 4500ms infinite;
+}
+
+@media screen and (max-width: 1176px) {
+    .polygon-a, .polygon-b{
+        width: 240px;
+        top: 10%;
+        left: 15%;
+    }
+    .polygon-b{
+        top: 13%;
+        left: 18%;
+    }
+
+    .polygon-c, .polygon-d{
+        width: 240px;
+        top: 45%;
+        left: 25%;
+    }
+    .polygon-d{
+        top: 48%;
+        left: 28%;
+    }
+
+    .polygon-e, .polygon-f{
+        width: 240px;
+        top: 30%;
+        left: 55%;
+    }
+    .polygon-f{
+        top: 33%;
+        left: 60%;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .polygon-a, .polygon-b{
+        width: 240px;
+        top: 10%;
+        left: 15%;
+    }
+    .polygon-b{
+        top: 13%;
+        left: 18%;
+    }
+
+    .polygon-c, .polygon-d{
+        width: 240px;
+        top: 50%;
+        left: 25%;
+    }
+    .polygon-d{
+        top: 53%;
+        left: 28%;
+    }
+
+    .polygon-e, .polygon-f{
+        width: 240px;
+        top: 30%;
+        left: 55%;
+    }
+    .polygon-f{
+        top: 33%;
+        left: 60%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .polygon-a, .polygon-b{
+        width: 160px;
+        top: 10%;
+        left: 15%;
+    }
+    .polygon-b{
+        top: 13%;
+        left: 18%;
+    }
+
+    .polygon-c, .polygon-d{
+        width: 160px;
+        top: 40%;
+        left: 25%;
+    }
+    .polygon-d{
+        top: 43%;
+        left: 28%;
+    }
+
+    .polygon-e, .polygon-f{
+        width: 160px;
+        top: 20%;
+        left: 70%;
+    }
+    .polygon-f{
+        top: 20%;
+        left: 73%;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .polygon-a, .polygon-b{
+        width: 25%;
+        top: 10%;
+        left: 15%;
+    }
+    .polygon-b{
+        top: 13%;
+        left: 18%;
+    }
+
+    .polygon-c, .polygon-d{
+        width: 25%;
+        top: 40%;
+        left: 25%;
+    }
+    .polygon-d{
+        top: 43%;
+        left: 28%;
+    }
+
+    .polygon-e, .polygon-f{
+        width: 25%;
+        top: 30%;
+        left: 60%;
+    }
+    .polygon-f{
+        top: 33%;
+        left: 63%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .polygon-a, .polygon-b{
+        width: 30%;
+        top: 20%;
+        left: 15%;
+    }
+    .polygon-b{
+        top: 23%;
+        left: 18%;
+    }
+
+    .polygon-c, .polygon-d{
+        width: 30%;
+        top: 60%;
+        left: 25%;
+    }
+    .polygon-d{
+        top: 63%;
+        left: 28%;
+    }
+
+    .polygon-e, .polygon-f{
+        width: 30%;
+        top: 40%;
+        left: 50%;
+    }
+    .polygon-f{
+        top: 43%;
+        left: 53%;
+    }
+
+}
